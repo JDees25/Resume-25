@@ -50,7 +50,7 @@ jobs:
         run: sleep 3
       - name: Check homepage status in localhost
         run: |
-          URLs=("https://deesresume.com")
+          URLs=("http://localhost:8080/")
           for url in "${URLs[@]}"; do
               response_code=$(curl -w "%{http_code}" -I "$url" -o /dev/null)
               echo -e "e HTTP Status Code for $url: $response_code"
